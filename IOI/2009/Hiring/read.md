@@ -1,0 +1,17 @@
+<font color="red"><b>*** unveritifed ***</b></font><hr>
+Our purpose is to maximize people to hire(if same, minimize the cost)<br><br>
+
+Let's suppose G the group of selected workers<br><br>
+
+Then for worker i, his payment is Q<sub>i</sub> * (maximum cost per unit qualification level among the group members)<br>
+(*unit qualification level means Q<sub>i</sub>=1<br> and cost per unit qualification is determined by S<sub>i</sub>/Q<sub>i</sub>)<br><br>
+
+To solve this, sort according to S<sub>i</sub>/Q<sub>i</sub> and let's set maximum cost per unit qualification level among the group members S<sub>i</sub>/Q<sub>i</sub>(let's call it MC)<br><br>
+
+Using min-heap, add employees to employed list according to qualification level(ascending order) that appeared before i-th element(includes itself) until total cost exceed total Budget W<br><br>
+
+if more people can be employed with i-th MC, that will replace exisitng answer.<br>
+But, if still same, it will not replace exisitng answer, because its cost will be more than existing answer.<br>
+And if cost of hiring exisitg set of employees exceeds W when changing i to i+1, that means we can't make any better answer than previously calculated value.(As it's much expensive as i increases and thus can only hire less people)So terminate.<br><br>
+
+It will take O(N) time finally.
