@@ -14,4 +14,4 @@ if more people can be employed with i-th MC, that will replace exisitng answer.<
 But, if still same, it will not replace exisitng answer, because its cost will be more than existing answer.<br>
 And if cost of hiring exisitg set of employees exceeds W when changing i to i+1, that means we can't make any better answer than previously calculated value.(As it's much expensive as i increases and thus can only hire less people)So terminate.<br><br>
 
-It will take O(N) time finally.
+It will take O(NlgN) time finally.
